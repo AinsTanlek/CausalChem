@@ -1,0 +1,17 @@
+
+task_name: Ligands optimization
+input_dimension: 32
+hidden_layer: [34, 34]
+output_layer: 1  # no activation function applied
+activation_function: relu
+norm: standardScaler
+learning_rate: 0.004
+learning_rate_schedule: cosine decay or step decay
+batch_size: 4
+optimizer: SGD
+momentum: 0.9
+loss_function: mean squared error  # reduction = 'none'
+random_seed: 3
+weight_initialization: kaiming_normal_, applied to all layers
+bias_initialization: zeros  # default setting
+

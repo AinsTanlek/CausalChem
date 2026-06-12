@@ -1,0 +1,13 @@
+
+# shap config
+
+random_seed: 42
+num_threads: 1
+cudnn_deterministic: true
+cudnn_benchmark: false
+
+background_data: "all data"  # all training data as background data
+replace: False
+shap_explainer_type: Kernel
+shap_nsamples: 512  # default
+shap_link: identity

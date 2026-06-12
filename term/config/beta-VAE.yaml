@@ -1,0 +1,53 @@
+
+MOFs screening task:
+  beta: [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
+  input_dim: 10
+  output_dim: 10
+  encoder_hidden_layers: [30, 10]
+  latent_dimension: [2, 4, 6]
+  decoder_hidden_layers: [10, 30]
+  weights_type: none
+  batch_size: [32, 64]  
+  shuffle: True
+  drop_last: False
+  activation_function: relu
+  KLD_warmup_fraction: 0
+  learning_rate: [0.001, 0.002, 0.0025]
+  optimizer: Adam
+  random_seed: 42
+  
+  
+POEs discovery task:
+  beta: [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
+  input_dim: 10
+  output_dim: 10
+  encoder_hidden_layers: [32, 16]
+  latent_dimension: [2, 4, 6]
+  decoder_hidden_layers: [16, 32]
+  weights_type: none
+  batch_size: [2, 4]
+  shuffle: True
+  drop_last: False
+  activation_function: relu
+  KLD_warmup_fraction: 0
+  learning_rate: 0.001
+  optimizer: Adam
+  random_seed: 42
+  
+  
+Ligands optimization task:
+  beta: [1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5, 5.0]
+  input_dim: 8
+  output_dim: 8
+  encoder_hidden_layers: [12]
+  latent_dimension: [2, 3]
+  decoder_hidden_layers: [12]
+  weights_type: none
+  batch_size: 8
+  shuffle: True
+  drop_last: False
+  activation_function: relu
+  KLD_warmup_fraction: 0
+  learning_rate: [0.0008, 0.001, 0.003]
+  optimizer: Adam
+  random_seed: 42
